@@ -1,7 +1,10 @@
 package pizzas.authorization.users;
 
+;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
+import org.springframework.data.relational.core.mapping.Table;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -9,25 +12,22 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
-import lombok.AccessLevel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
-
+import lombok.AccessLevel;
 @Data
-@RequiredArgsConstructor
-@NoArgsConstructor(force=true, access=AccessLevel.PRIVATE)
+@Table
+@NoArgsConstructor(force=true, access= AccessLevel.PRIVATE)
 public class User implements UserDetails {
-
 
     private static final long serialVersionUID = 1L;
 
     @Id
     private Long id;
 
-    private final String username;
-    private final String password;
-    private final String role;
+    private String username;
+    private String password;
+    private String role;
 
     @Override
     @Transient

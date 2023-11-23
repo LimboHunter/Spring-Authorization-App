@@ -15,7 +15,7 @@ public class AuthApplication {
         SpringApplication.run(AuthApplication.class, args);
     }
 
-    @Bean
+/*    @Bean
     public ApplicationRunner dataLoader(
             UserRepository repo, PasswordEncoder encoder) {
         return args -> {
@@ -24,6 +24,6 @@ public class AuthApplication {
             repo.save(
                     new User("tacochef", encoder.encode("password"), "ROLE_ADMIN"));
         };
-    }
+    }*/
 
 }
