@@ -41,10 +41,10 @@ public class AuthorizationServerConfig {
                 .formLogin(Customizer.withDefaults())
                 .build();
     }
-    //Browser link for testing http://localhost:9000/oauth2/authorize?response_type=code&client_id=pizza-admin-client&redirect_uri=http://127.0.0.1:9090/login/oauth2/code/pizza-admin-client&-scope=writeIngredients+deleteIngredients
+    //Browser link for testing http://localhost:9000/oauth2/authorize?response_type=code&client_id=pizza-admin-client&redirect_uri=http://127.0.0.1:9090/login/oauth2/code/pizza-admin-client&scope=writeIngredients+deleteIngredients
 
     //cmd command:
-    //curl localhost:9000/oauth2/token -H"Content-type: application/x-www-form-urlencoded" -d"grant_type=authorization_code" -d"redirect_uri=http://127.0.0.1:9090/login/oauth2/code/pizza-admin-client" -d"code=3XRk-T0smVgZu7IQkG03ER4m70oOaw_33r08WENm57hR55kC5zj6Jj6-9t3hpSqgoXZQZFA3PSbgqghMt-t5K3QvfCY8p4M5XmHYd_Hr-L-FK3kfS8NXOsJeH6jWW0Mx" -u pizza-admin-client:secret
+    //curl localhost:9000/oauth2/token -H"Content-type: application/x-www-form-urlencoded" -d"grant_type=authorization_code" -d"redirect_uri=http://127.0.0.1:9090/login/oauth2/code/pizza-admin-client" -d"code=wGHWj1rjPChAF38aWy852Kc0_zydwN0OZ35k8gTYbdNQGCszPOJy_zoI_Ka6SNYYuRZsbxvTeOpmJfJcJINXtVPdtX9GqROm3CBaB1Sw8LYIA0vEi6TFAdHyOlJnfrHG" -u pizza-admin-client:secret
     @Bean
     public RegisteredClientRepository registeredClientRepository(
             PasswordEncoder passwordEncoder) {

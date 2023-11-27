@@ -38,11 +38,16 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <!--version in book 0.1.2 does not work so need to set 0.1.1-->
+        <!-- DONE! version in book 0.1.2 does not work so need to set 0.1.1 -->
         <dependency>
             <groupId>org.springframework.security.experimental</groupId>
             <artifactId>spring-security-oauth2-authorization-server</artifactId>
-            <version>0.1.1</version>
+            <version>0.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-oauth2-client</artifactId>
         </dependency>
 
         <dependency>
