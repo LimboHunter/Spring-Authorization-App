@@ -69,7 +69,7 @@ public class AuthorizationServerConfig {
 
     @Bean
     public ProviderSettings providerSettings() {
-        return new ProviderSettings().issuer("http://authserver:9000");
+        return new ProviderSettings().issuer("http://localhost:9000");
     }
 
     @Bean
@@ -79,6 +79,7 @@ public class AuthorizationServerConfig {
         JWKSet jwkSet = new JWKSet(rsaKey);
         return (jwkSelector, securityContext) -> jwkSelector.select(jwkSet);
     }
+
 
     private static RSAKey generateRsa() throws NoSuchAlgorithmException {
         KeyPair keyPair = generateRsaKey();
@@ -100,4 +101,5 @@ public class AuthorizationServerConfig {
     public JwtDecoder jwtDecoder(JWKSource<SecurityContext> jwkSource) {
         return OAuth2AuthorizationServerConfiguration.jwtDecoder(jwkSource);
     }
+
 }
